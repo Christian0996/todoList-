@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>todoList</title>
+</head>
+<body class="full" style="position: relative; overflow: hidden;">
+
+    <div class="grid-container">
+         <!--
+            NAVIGATION
+         -->
+        <nav class="bg-light-blue flex flex-ac">
+            <button class="btn-wrapper invisible-btn btn-wrapper--hide" onclick="curtain.open()">
+                <img src="/icons/menuicon.png" alt="">
+            </button>
+        </nav>
+        <!--
+            ASIDE
+        -->
+        <aside class="bg-white curtaine">
+            <div>
+                <div class="modal-container full flex flex-col flex-jc flex-ac">
+                    <div class="modal addlist-modal">
+                        <form action="" class="flex flex-wrap flex-sa" id="form1">
+                            <input type="text" name="frm1Txt" id="frm1Txt" class="full" style="margin-bottom: 20px;">
+                            <input type="button" value="Add" id="addlistBtn" class="btn forty-five">
+                            <input type="button" value="Back" class="btn forty-five" onclick="modalContainer.close(0)">
+                        </form>
+                        <p class="message" id="frm1ErrMess"></p>
+                    </div>
+                    <div class="modal editlist-modal flex flex-wrap flex-sa flex-ac">
+                        <form action="" class="flex flex-wrap flex-sa" id="frm2">
+                            <input type="text" name="frm2Txt" id="frm2Txt" class="full" style="margin-bottom: 20px;">
+                            <input type="button" value="Save" class="btn forty-five">
+                            <input type="button" value="Back" class="btn forty-five" onclick="modalContainer.close(1)">
+                        </form>
+                        <p class="message"></p>
+                    </div>
+                </div>
+
+                <div class="wrapper1 flex flex-wrap flex-ac flex-jc">
+                    <button class="close-btn btn-wrapper invisible-btn" onclick="curtain.close()"><img src="/icons/closeicon.png" alt=""></button>
+
+                    <img src="/images/meattaytay.jpg" alt="" class="my-img">
+
+                    <div class="fifty">
+                        <span class="span-txt">Chrstain Derick</span>
+                        <span class="span-txt">Hire me</span>
+                    </div>
+
+                    <button class="full addnewtask-btn btn" onclick="topInptModal.open()">Add new task</button>
+                </div>
+
+                <div class="wrapper2" id="list">
+                    <label class="full flex flex-ac">
+                        <span class="spant-txt-big">List</span>
+                        <span class="addlist" onclick="modalContainer.open(0)"></span>
+                    </label>
+                    <label class="full flex flex-ac">
+                        <input type="checkbox" class="hidden-checkbox">
+                        <span class="span-txt">Personal</span>
+                        <span class="circle-num list-circle-num" id="personal">0</span>
+                    </label>
+                    <label class="full flex flex-ac">
+                        <input type="checkbox" class="hidden-checkbox">
+                        <span class="span-txt">Work</span>
+                        <span class="circle-num list-circle-num" id="work">0</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+        <!--
+            MAIN
+        -->
+        <main class="flex flex-col flex-wrap flex-ac">
+            <div class="item flex flex-col flex-ac ninety">
+
+                <div class="content-wrapper flex flex-col full"> 
+                    <h1 id="time"> <span id="ampm"></span></h1>
+                    <span class="span-txt" id="date"></span>
+                    <span class="span-txt">Your task for today</span>
+                </div>
+    
+                <div class="content-wrapper full" id="todayTask">
+                    <div class="head full flex flex-ac flex-sb">
+                        <span class="span-txt-medium flex flex-jc flex-ac">Today <span class="circle-num" style="margin-left: 10px;" id="todayQty">0</span></span>
+                        <span class="icon-wrapper arrow rotate" onclick="todayTask.hideTask(this)"></span>
+                    </div>
+                </div>
+     
+                <div class="content-wrapper full" id="nextDayTask">
+                    <div class="head full flex flex-ac flex-sb">
+                        <span class="span-txt-medium flex flex-jc flex-ac">Next days<span class="circle-num" style="margin-left: 10px;" id="nextDayQty">0</span></span>
+                        <span class="icon-wrapper arrow rotate" onclick="nextDayTask.hideTask(this)"></span>
+                    </div>
+                </div>
+
+                <div class="content-wrapper full" id="missTask">
+                    <div class="head full flex flex-ac flex-sb">
+                        <span class="span-txt-medium flex flex-jc flex-ac">Miss<span class="circle-num" style="margin-left: 10px;" id="missTaskQty">0</span></span>
+                        <span class="icon-wrapper arrow rotate" onclick="missTask.hideTask(this)"></span>
+                    </div>
+                </div>
+
+                <button class="btn-wrapper btn-wrapper--circle btn shadow" onclick="bottomInptModal.open()"><img src="/icons/addicon.png" alt=""></button>
+            </div>
+            
+            <div class="item item2">
+                <!--TOP INPUT MODAL-->
+                <div class="modal full flex flex-col top-input-modal">
+                    <form action="" id="frm3" class="flex flex-wrap flex-sb">
+                        <select name="select-list">
+                            <option>Personal</option>
+                            <option>Work</option>
+                        </select>
+                        <input type="text" name="frm3Txt" id="frm3Txt" class="full">
+                        <label for="frm3Date" class="forty-five">Date</label>
+                        <label for="frm3Time" class="forty-five">Time</label>
+                        <input type="date" name="frm3Date" id="frm3Date" class="forty-five">
+                        <input type="time" name="frm3Time" id="frm3Time" class="forty-five">
+                        <input type="button" value="Add" class="forty-five btn">
+                        <input type="button" value="Back" class="forty-five btn" onclick="topInptModal.close()">
+                    </form>
+                    <p class="message addTaskErrMess"></p>
+                </div>
+            </div>
+            <!--
+                BOTTOM INPUT MODAL
+            -->
+            <div class="modal bottom-input-modal full">
+                <form action="" id="frm4" class="flex flex-wrap flex-sb" style="margin-bottom: 10px;">
+                    <select name="select-list">
+                        <option>Personal</option>
+                        <option>Work</option>
+                    </select>
+                    <input type="text" name="frm4Txt" id="frm4Txt" class="full">
+                    <label for="" class="forty-five">Date</label>
+                    <label for="" class="forty-five">Time</label>
+                    <input type="date" name="frm4Date" id="frm4Date" class="forty-five">
+                    <input type="time" name="frm4Time" id="frm4Time" class="forty-five">
+                    <input type="button" value="Add"  class="eighty btn" style="margin: auto;">
+                </form>
+                <button style="display: block; margin: auto; font-size: 14px;" class="invisible-btn" onclick="bottomInptModal.close()">Back to tasklist</button>
+                <p class="message addTaskErrMess"></p>
+            </div>
+            <span class="span-txt-medium close-edit-task-modal modal">Close</span>
+        </main>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
