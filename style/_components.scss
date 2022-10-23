@@ -1,0 +1,60 @@
+@use "../style/colors";
+@use "../style/fonts";
+
+button {
+    cursor: pointer;
+}
+
+//Site button
+.btn {
+    background-color: colors.$blue;
+    color: white;
+    border: none;
+    font-family: bold;
+    line-height: 2em;
+    border-radius: 15px;
+}
+
+//Button wrapper 
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invisible-btn {
+    font-size: 14px;
+    font-family: medium;
+    border: none;
+    background: rgba($color: #000000, $alpha: 0.0);
+}
+
+form {
+    font-size: 14px;
+
+    input, select {
+        outline: none;
+        border-radius: 7px;
+        border: none;
+        border: 2px solid colors.$black;
+    }
+
+    input[type="text"] {
+        margin-top: 10px;
+        height: 35px;
+        font-size: 18px;
+        font-family: bold;
+        padding: 0 10px;
+    }
+
+    label {
+        line-height: 2em;
+        font-family: medium;
+    }
+
+    input[type="date"], input[type="time"] {
+        margin-bottom: 20px;
+        height: 25px;
+        padding: 0 5px;
+    }
+}   

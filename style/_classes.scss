@@ -1,0 +1,256 @@
+@use  "../style/fonts";
+@use  "../style/colors";
+
+//Form input/label/select
+
+//Hidden Checkbox
+.hidden-checkbox {
+    opacity: 0;
+    display: none;
+    width: 0;
+    height: 0;
+
+    &:checked ~ .trash {
+        right: 0;
+    }
+
+    &:checked ~ .edit-task {
+        top: 6px;
+    }
+}
+
+
+//Icon wrapper
+.icon-wrapper {
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.arrow::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 0px;
+    bottom: 1px;
+    border: 2px solid black;
+    border-top: 0;
+    border-right: 0;
+}
+
+.trash {
+    position: absolute;
+    right: -25px;
+    z-index: 1;
+
+    &::before {
+        content: url(/icons/trashicon.png);
+        position: relative;
+        right: 7px;
+        bottom: 7px;
+    }
+}
+
+.edit-task {
+    position: absolute;
+    right: 30px;
+    top: -24px;
+
+    &::before {
+        content: url(/icons/editicon.png);
+        position: absolute;
+    }
+}
+
+//Modal Icon
+.modal-icon {
+    height: 30px;
+    width: 30px;
+}
+
+//Span text
+.span-txt {
+    font-size: 14px;
+    font-family: medium;
+    display: inline-block;
+    line-height: 2em;
+    max-width: 300px;
+}
+
+.span-txt-medium {
+    font-size: 16px;
+    font-family: bold;
+}
+
+.spant-txt-big {
+    font-size: 24px;
+    font-family: bold;
+}
+
+//Span number 
+.circle-num {
+    padding: 0 4px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-family: bold;
+    background-color: colors.$gray;
+}
+
+//Message 
+.message {
+    line-height: 3em;
+    font-size: 13px;
+    font-style: italic;
+    color: red;
+}
+
+
+//Background color
+.bg-light-blue {
+    background-color: colors.$light-blue;
+}
+
+.bg-white {
+    background-color: colors.$white;
+}
+
+//Flex container
+.flex {
+    display: flex;
+}
+
+.flex-jc {
+    justify-content: center;
+}
+
+.flex-je {
+    justify-content: flex-end;
+}
+
+.flex-sa {
+    justify-content: space-around;
+}
+
+.flex-sb {
+    justify-content: space-between;
+}
+
+.flex-se {
+    justify-content: space-evenly;
+}
+
+.flex-as {
+    align-items: flex-start;
+}
+
+.flex-ac {
+    align-items: center;
+}
+
+.flex-ae {
+    align-items: flex-end;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+//Width
+
+/* 20% wide */
+.twenty {
+    width: 20%;
+}
+
+/* 25% wide */
+.twenty-five {
+    width: 25%;
+}
+
+/* 30% wide */
+.thirty {
+    width: 30%;
+}
+
+/* 35% wide */
+.thirty-five {
+    width: 35%;
+}
+
+/* 40% wide */
+.forty {
+    width: 40%;
+}
+
+/* 45% wide */
+.forty-five {
+    width: 45%;
+}
+
+/* 50% wide */
+.fifty {
+    width: 50%;
+}
+
+/* 55% wide */
+.fifty-five {
+    width: 55%;
+}
+
+/* 60% wide */
+.sixty {
+    width: 60%;
+}
+
+/* 70% wide */
+.seventy {
+    width: 70%;
+}
+
+/* 75% wide */
+.seventy-five {
+    width: 75%;
+}
+
+/* 80% wide */
+.eighty {
+    width: 80%;
+}
+
+/* 85% wide */
+.eighty-five {
+    width: 85%;
+}
+
+/* 90% wide */
+.ninety {
+    width: 90%;
+}
+
+/* 95% wide */
+.ninety-five {
+    width: 95%;
+}
+
+/* 100% wide */
+.full {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+

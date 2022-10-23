@@ -1,0 +1,27 @@
+//Mobile screen layout
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 270px auto;
+    grid-template-rows: 50px auto;
+}
+
+nav { grid-area: 1 / 1 / span 1 / span 2;}
+
+main { grid-area: 2 / 1 / span 1 / span 2;}
+
+
+//Tablet to Desktop screen layout
+@media (min-width: 701px) {
+    nav {
+        grid-area: 1 / 1 / span 1 / span 2;
+    }
+    
+    aside {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+    
+    main {
+        grid-area: 2 / 2 / span 1 / span 1;
+    }
+}

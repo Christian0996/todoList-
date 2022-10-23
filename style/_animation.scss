@@ -1,0 +1,29 @@
+//Site Modal
+.rotate{ 
+    transform: rotate(315deg); 
+}
+
+#todayTask, 
+#nextDayTask,
+#missTask {
+    transition: height 0.7s ease;
+}
+
+.modal, .curtaine {
+    transition: 0.8s ease;
+}
+
+.icon-wrapper, .addlist-modal, .editlist-modal, .top-input-modal {
+    transition: 500ms ease;
+}
+
+.addlist-modal, .editlist-modal {
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+    from {top: 20%;}
+    to {top: 25%;}
+}
+
