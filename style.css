@@ -44,19 +44,19 @@ main {
 }
 @font-face {
   font-family: regular;
-  src: url(/font/Montserrat-Regular.otf);
+  src: url(font/Montserrat-Regular.otf);
 }
 @font-face {
   font-family: medium;
-  src: url(/font/Montserrat-Medium.otf);
+  src: url(font/Montserrat-Medium.otf);
 }
 @font-face {
   font-family: bold;
-  src: url(/font/Montserrat-Bold.otf);
+  src: url(font/Montserrat-Bold.otf);
 }
 @font-face {
   font-family: extra-bold;
-  src: url(/font/Montserrat-ExtraBold.otf);
+  src: url(font/Montserrat-ExtraBold.otf);
 }
 body {
   font-family: regular;
@@ -201,7 +201,7 @@ form input[type=date], form input[type=time] {
   z-index: 1;
 }
 .trash::before {
-  content: url(/icons/trashicon.png);
+  content: url(icons/trashicon.png);
   position: relative;
   right: 7px;
   bottom: 7px;
@@ -213,7 +213,7 @@ form input[type=date], form input[type=time] {
   top: -24px;
 }
 .edit-task::before {
-  content: url(/icons/editicon.png);
+  content: url(icons/editicon.png);
   position: absolute;
 }
 
@@ -476,7 +476,7 @@ aside > div:nth-child(1) .wrapper2 label .addlist {
   cursor: pointer;
 }
 aside > div:nth-child(1) .wrapper2 label .addlist::before {
-  content: url(/icons/smalladdicon.png);
+  content: url(icons/smalladdicon.png);
 }
 aside > div:nth-child(1) .wrapper2 input[type=checkbox] + .span-txt {
   text-overflow: ellipsis;
